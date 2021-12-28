@@ -1,0 +1,133 @@
+:root {
+  --red: #f1121b;
+  --dark-green: #177300;
+  --light-green: #77a047;
+  --orange: #fdae03;
+  --yellow: #fcf727;
+  --snow: #f0f4f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  color: var(--dark-green);
+  background-color: var(--snow);
+  background: url("images/christmas-owl.png") no-repeat;
+  background-position: center;
+}
+
+.main,
+.container,
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  padding: 1em;
+  margin: 0 3.75em;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  color: var(--snow);
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.nice-list {
+  background: var(--dark-green);
+}
+
+.naughty-list {
+  background: var(--red);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  height: 330px;
+  position: absolute;
+  top: 42.2%;
+}
+
+input[type="checkbox"] {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5em;
+  margin-top: 3.8em;
+  margin-bottom: -3.4em;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 2px solid green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔️";
+  font-size: 22px;
+  position: relative;
+  top: 3px;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+#fname {
+  margin: 0.4em 0 2.1em;
+  padding: 0.75em 0.5em;
+  width: 100%;
+}
+
+.buttons {
+  margin-top: 4.3em;
+}
+
+button {
+  padding: 0.8em 2.2em;
+  border: none;
+  font-size: 1.5rem;
+  background-color: var(--yellow);
+  color: var(--dark-green);
+  margin-right: 0.35em;
+  font-weight: 700;
+  border-radius: 999px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#btn-sort {
+  background: var(--orange);
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
